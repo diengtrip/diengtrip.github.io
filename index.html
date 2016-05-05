@@ -16,20 +16,53 @@
       $("#paketwisata").load("paket-wisata.html");
       $("#divwrap").load("menu-samping.html");
     });
+	
+
+$(document).ready(function() {
+ // executes when HTML-Document is loaded and DOM is ready
+var w = window.innerWidth;
+var h = window.innerHeight;	
+var csheight='height='+h+'px;';
+$('#topwrap').css('height',h+'px');
+});
     </script>
 <style>
+body,
+html{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
 body{    margin: 0;
     padding: 0;
 font-family: 'Roboto', sans-serif;font-size:14px;
     color: #666;}
 body a{text-decoration:none;color:#0E85DC}
-header{background:#666}
+header{background: #5683B3;}
 header .hw{padding:0px}
-header h1{padding:30px 10px 30px;display:inline-block;font-size:18px;line-height:1.3em;color:#fff;font-weight:normal;letter-spacing:2px}
+header h1{padding:10px 10px 10px;display:inline-block;font-size:18px;line-height:1.3em;color:#fff;font-weight:normal;letter-spacing:2px}
+#topwrap{width:100%;margin:0px auto;background:#000 url(paket-wisata-dieng.jpg)no-repeat center right;}
+#formpaket{    position: absolute;
+    top: 130px;
+    left: 30px;background:#fff;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px
+	-webkit-border-radius:5px;overflow:hidden}
+#formpaket h3{background:#72A2D6;color:#fff;letter-spacing:2px; font-weight:normal;font-size:20px;text-align:center;margin:0px;padding:10px;border-bottom:#eee solid 1px}	
+	
+#formpaket select{padding:10px;border:#eee solid 1px;display:block;margin:5px 0px;min-width:250px;font-weight:bold}	
+	
+	
 aside ul li a{color:#222;font-weight:normal;font-size:15px;}
 aside ul li ul li a{color:#0E85DC;font-weight:normal;font-size:14px;}
 aside ul li a{display:block;padding:7px 5px;border-bottom:#eee solid 1px}
-main{width:70%;float:right;position:relative;overflow:hidden}
+main{width: 70%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+    background: #fff;}
 aside{width:30%;display:inline-block;float:left;vertical-align:middle;text-align:right}
 aside #divwrap {vertical-align:middle;height:600px}
 main h1,main h2,main h3{font-weight: normal;
@@ -60,15 +93,43 @@ nav ul li a:hover{border-top:#fff solid 3px;}
    <li><a href="">Wisata Dieng 2d1n</a></li>
    <li><a href="">Kontak Kami</a></li>
 </ul> </div>
- </nav>
+ </nav></div>
  </header>
+<div id='topwrap' class='centerdiv'>
+<div  id='formpaket'>
+<h3>Cari Paket Ke Dieng</h3>
+<div class='pad20'>
 
+<form role="form" novalidate>
+
+    <select>
+        <option selected>1 hari</option>
+        <option>2 hari 1 malam</option>
+        <option>3 hari 2 malam</option>
+    </select>
+
+
+    <select>
+        <option selected>dieng</option>
+        <option>wonosobo</option>
+        <option>purwokerto</option>
+        <option>Yogyakarta</option>
+        <option>Semarang</option>
+        <option>Solo</option>			
+    </select>
+
+</form>
+</div>
+</div>
+</div>
  <div class='width100 centerdiv' style='max-width:900px'>
  <main>
  <div id='paketwisata' class='mrg20'></div>
  </main>
  <aside>
 <div id='divwrap' class='sidemenu dinblock nolist pad10 bd-right-bdgrey'>
+
+
 
 </div>
  </aside>
