@@ -22,9 +22,9 @@ $(document).ready(function() {
  // executes when HTML-Document is loaded and DOM is ready
 var w = window.innerWidth;
 var h = window.innerHeight;	
-var csheight='height='+h+'px;';
+if(w >=700){
 $('#topwrap').css('height',h+'px');
-});
+}});
     </script>
 <style>
 body,
@@ -42,7 +42,6 @@ header{ background: rgba(239, 115, 25, 0.74);
 }
 header .hw{padding:0px}
 header h1{padding:10px 10px 10px;display:inline-block;font-size:18px;line-height:1.3em;color:#fff;font-weight:normal;letter-spacing:2px}
-#topwrap{width:100%;margin:0px auto;background:#000 url(paket-wisata-dieng.jpg)no-repeat center right;}
 #topwrap h1{}
 #topwrap h2{}
 #formpaket{position: absolute;
@@ -79,6 +78,13 @@ nav ul li a{display:block;padding:20px 0px 20px;margin:0px 10px 0px 0px;color:#f
 nav ul li a:hover{border-top:#fff solid 3px;}
 .post-img img{width:100%;height:auto!important}
 .padtop30{padding-top:30px;}
+@media(min-width:770px){
+#topwrap{width:100%;margin:0px auto;background:#000 url(paket-wisata-dieng.jpg)no-repeat center right;background-size:100%}
+}
+@media(max-width:769px){
+#topwrap{width:100%;margin:0px auto;background:#000 url(paket-wisata-dieng-m.jpg)no-repeat center right;min-height:300px}
+
+}
 </style>
 </head>
 <body>
