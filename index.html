@@ -38,22 +38,21 @@ body{    margin: 0;
 font-family: 'Roboto', sans-serif;font-size:14px;
     color: #666;}
 body a{text-decoration:none;color:#0E85DC}
-header{background: #5683B3;}
+header{ background: rgba(239, 115, 25, 0.74);
+}
 header .hw{padding:0px}
 header h1{padding:10px 10px 10px;display:inline-block;font-size:18px;line-height:1.3em;color:#fff;font-weight:normal;letter-spacing:2px}
 #topwrap{width:100%;margin:0px auto;background:#000 url(paket-wisata-dieng.jpg)no-repeat center right;}
-#formpaket{    position: absolute;
-    top: 130px;
-    left: 30px;background:#fff;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-o-border-radius:5px
-	-webkit-border-radius:5px;overflow:hidden}
-#formpaket h3{background:#72A2D6;color:#fff;letter-spacing:2px; font-weight:normal;font-size:20px;text-align:center;margin:0px;padding:10px;border-bottom:#eee solid 1px}	
-	
-#formpaket select{padding:10px;border:#eee solid 1px;display:block;margin:5px 0px;min-width:250px;font-weight:bold}	
-	
-	
+#topwrap h1{}
+#topwrap h2{}
+#formpaket{position: absolute;
+    bottom: 5px;
+    left: 0px;
+	right:0px;
+overflow:hidden}
+#formpaket h1{font-size:300%;font-family:Arial Black}
+#formpaket h3{color:#fff;letter-spacing:2px; font-weight:normal;font-size:12px;text-align:center;margin:0px;padding:10px;}	
+#formpaket select{padding:10px;border:#eee solid 1px;display:inline-block;margin:5px 0px;min-width:250px;font-weight:bold;fomt-size:16px;color:#555}	
 aside ul li a{color:#222;font-weight:normal;font-size:15px;}
 aside ul li ul li a{color:#0E85DC;font-weight:normal;font-size:14px;}
 aside ul li a{display:block;padding:7px 5px;border-bottom:#eee solid 1px}
@@ -76,7 +75,7 @@ main #paketwisata p{line-height: 1.6em;
 nav{font-size:12px;display:inline-block;float:right;}
 nav ul{margin:0px;padding:0px}
 nav ul li{margin:0!important;padding:0!important}
-nav ul li a{display:block;padding:30px 0px 30px;margin:0px 10px 0px 0px;color:#fff;font-weight: normal;border-top:transparent solid 3px}
+nav ul li a{display:block;padding:20px 0px 20px;margin:0px 10px 0px 0px;color:#fff;font-weight: normal;border-top:transparent solid 3px}
 nav ul li a:hover{border-top:#fff solid 3px;}
 .post-img img{width:100%;height:auto!important}
 .padtop30{padding-top:30px;}
@@ -85,32 +84,37 @@ nav ul li a:hover{border-top:#fff solid 3px;}
 <body>
  <header>
  <div class='hw'>
- <h1>Paket Wisata Dieng </h1>
- <nav><div class='nolist-inline text-right fblack fbold'>
+
+ <nav>
+ <div class='nolist-inline text-right fblack fbold'>
  <ul>
    <li><a href="">Wisata Dieng One Day Tour</a></li>
    <li><a href="">Wisata Dieng 2d1n</a></li>
    <li><a href="">Wisata Dieng 2d1n</a></li>
    <li><a href="">Kontak Kami</a></li>
-</ul> </div>
- </nav></div>
+</ul> 
+</div>
+ </nav>
+ </div>
  </header>
 <div id='topwrap' class='centerdiv'>
-<div  id='formpaket'>
-<h3>Cari Paket Ke Dieng</h3>
-<div class='pad20'>
+<div  id='formpaket' class='fwhite text-center'>
+<h1>GETAWAY<span class='fyellow'>DIENG</span></h1>
+ <h2 class=''>Paket Wisata Dieng </h2>
+ <p>MarketPlace Paket Wisata Dieng Terlengkap. Bandingkan harga Paket dari berbagai Biro Lokal Dieng dan Sekitarnya dan dapatkan Penawaran Terbaik.</p>
+<div class='pad20 mrg5 text-center'>
 
 <form role="form" novalidate>
 
     <select>
-        <option selected>1 hari</option>
+        <option>durasi</option>
+		<option>1 hari</option>
         <option>2 hari 1 malam</option>
         <option>3 hari 2 malam</option>
     </select>
-
-
     <select>
-        <option selected>dieng</option>
+        <option>Meeting Point</option>	
+        <option>dieng</option>
         <option>wonosobo</option>
         <option>purwokerto</option>
         <option>Yogyakarta</option>
