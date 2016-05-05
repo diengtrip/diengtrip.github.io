@@ -26,6 +26,10 @@ var h = window.innerHeight;
 
 $('#topwrap').css('height',h+'px');
 });
+
+$(document).on('click','.menuklik',function(){
+$('#menu-atas').toggle('slow');
+})
     </script>
 <style>
 body,
@@ -46,10 +50,17 @@ header h1{padding:10px 10px 10px;display:inline-block;font-size:18px;line-height
 #topwrap h1{}
 #topwrap h2{}
 #formpaket{position: absolute;
-    bottom: 5px;
+    bottom: 35px;
     left: 0px;
 	right:0px;
-overflow:hidden}
+overflow:hidden;padding:0px 10px}
+#formpaket a.but{padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    display: inline-block;
+    border: #fff solid 2px;
+    font-size: 18px;
+    letter-spacing: 3px;}
 #formpaket h1{font-size:30px;font-family:Arial Black;letter-spacing:3px}
 #formpaket h1 span{display:inline-block}
 #formpaket h1 span:hover { transform: scale(1.1); }
@@ -87,7 +98,7 @@ nav ul li a:hover{border-top:#fff solid 3px;}
 }
 @media(max-width:769px){
 #topwrap{width:100%;margin:0px auto;background:#000 url(paket-wisata-dieng-m.jpg)no-repeat center right;background-size:cover}
-nav{font-size:12px;background:rgba(0, 0, 0, 0.7);position:fixed;top:0;right:0;bottom:0;z-index:7}
+nav{font-size:12px;background:rgba(0, 0, 0, 0.7);position:fixed;top:0;right:0;bottom:0;z-index:7;min-width:90%}
 nav ul{margin:0px;padding:50px 0px}
 nav ul li{margin:0!important;padding:0!important;list-style-type:none;display:block}
 nav ul li a{    display: block;
@@ -99,19 +110,18 @@ nav ul li a{    display: block;
     text-align: right;
     font-family: Tahoma;
     border-bottom: rgba(204, 204, 204, 0.35) solid 1px;
-}}
+}
 nav ul li a:hover{background:#fff;color:#888}
-
 }
 </style>
 </head>
 <body>
  <header>
-  <div class='nav-icon mobshow curpon' style='position:fixed;top:5px;right:5px;width:35px;height:35px;margin:3px;z-index:8'><div></div></div>
+  <div class='menuklik nav-icon mobshow curpon' style='position:fixed;top:5px;right:5px;width:35px;height:35px;margin:3px;z-index:8'><div></div></div>
  <div class='hw'>
 
- <nav>
- <div class='fbold'>
+ <nav  id='menu-atas' class='fbold mobnon'>
+ <div>
  <ul>
    <li><a href="">Wisata Dieng One Day Tour</a></li>
    <li><a href="">Wisata Dieng 2d1n</a></li>
@@ -128,27 +138,8 @@ nav ul li a:hover{background:#fff;color:#888}
 <h1><span class='fwhite'>GETAWAY</span><span class='fyellow'>DIENG</span></h1>
 
  <p class='font120'>Ulasan Tempat Wisata dan MarketPlace Wisata Dieng Terlengkap mulai dari Penginapan. Paket trip, Rental Kendaraan dan lain-lain.</p><p> Temukan dan Bandingkan Penawaran harga terbaik untuk kemudahan Perjalanan wisata anda ke Dieng.</p>
-<div class='pad20 mrg5 text-center'>
-
-<form role="form" novalidate>
-
-    <select>
-        <option>durasi</option>
-		<option>1 hari</option>
-        <option>2 hari 1 malam</option>
-        <option>3 hari 2 malam</option>
-    </select>
-    <select>
-        <option>Meeting Point</option>	
-        <option>dieng</option>
-        <option>wonosobo</option>
-        <option>purwokerto</option>
-        <option>Yogyakarta</option>
-        <option>Semarang</option>
-        <option>Solo</option>			
-    </select>
-
-</form>
+<div class='pad20 mrg5 text-center  posrelhid'>
+<a href='#' class='but'>EXPLORE DIENG</a>
 </div>
 </div>
 </div>
