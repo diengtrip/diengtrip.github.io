@@ -9,20 +9,21 @@
 <meta name="robots" content="follow, all" />
 <meta name="description" content="Paket wisata Dieng tour organizer. Pilihan terbaik paket liburan ke Dieng dengan pengalaman baru yang menyenangkan. Nikmati layanan dan berbagai kemudahan dari Kami. Dieng tour mitra Setia Perjalanan wisata Anda." />
 <meta name="keywords" content="dieng, Tour Organizer, dieng tour, paket wisata, paket tour, wisata dieng, paket dieng, paket wisata dieng terbaik, paket wisata dieng 2013, dieng wonosobo, dieng jawa tengah, dieng indonesia" />
-<link rel="stylesheet" href="http://edysantosa08.github.io/css/rancangcss.css" type="text/css" charset="utf-8" />
-<script src='http://edysantosa08.github.io/js/jquery-2.2.3.min.js'></script>
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="rancangcss.css" type="text/css" charset="utf-8" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script src='jquery-2.2.3.min.js'></script>
 <script>
     $(function(){
-      $("#paketwisata").load("paket-wisata.html");
-      $("#divwrap").load("menu-samping.html");
+ //     $("#paketwisata").load("paket-wisata.html");
+ //     $("#divwrap").load("menu-samping.html");
     });
-	
+
 
 $(document).ready(function() {
  // executes when HTML-Document is loaded and DOM is ready
 var w = window.innerWidth;
-var h = window.innerHeight;	
+var h = window.innerHeight;
 
 $('#topwrap').css('height',h+'px');
 });
@@ -30,13 +31,25 @@ $('#topwrap').css('height',h+'px');
 $(document).on('click','.menuklik',function(){
 $('#menu-atas').toggle('slow');
 })
+
+$(document).on('click','.hashlink',function(event){
+var thehash=$(this).attr('href');
+window.location.hash =thehash;
+event.preventDefault()
+})
     </script>
 <style>
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto-Light.ttf');
+}
 body,
 html{
-    overflow: hidden;
+
     margin: 0;
-    padding: 0;
+    padding: 0;    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
 body{    margin: 0;
     padding: 0;
@@ -64,8 +77,8 @@ overflow:hidden;padding:0px 10px}
 #formpaket h1{font-size:30px;font-family:Arial Black;letter-spacing:3px}
 #formpaket h1 span{display:inline-block}
 #formpaket h1 span:hover { transform: scale(1.1); }
-#formpaket h3{color:#fff;letter-spacing:2px; font-weight:normal;font-size:12px;text-align:center;margin:0px;padding:10px;}	
-#formpaket select{padding:10px;border:#eee solid 1px;display:inline-block;margin:5px 0px;min-width:250px;font-weight:bold;fomt-size:16px;color:#555}	
+#formpaket h3{color:#fff;letter-spacing:2px; font-weight:normal;font-size:12px;text-align:center;margin:0px;padding:10px;}
+#formpaket select{padding:10px;border:#eee solid 1px;display:inline-block;margin:5px 0px;min-width:250px;font-weight:bold;fomt-size:16px;color:#555}
 aside ul li a{color:#222;font-weight:normal;font-size:15px;}
 aside ul li ul li a{color:#0E85DC;font-weight:normal;font-size:14px;}
 aside ul li a{display:block;padding:7px 5px;border-bottom:#eee solid 1px}
@@ -95,6 +108,7 @@ nav ul{margin:0px;padding:0px}
 nav ul li{margin:0!important;padding:0!important;list-style-type:none;display:inline-block}
 nav ul li a{display:block;padding:20px 0px 20px;margin:0px 10px 0px 0px;color:#fff;font-weight: normal;border-top:transparent solid 3px}
 nav ul li a:hover{border-top:#fff solid 3px;}
+.sobj{height:400px;position:relative;overflow:hidden}
 }
 @media(max-width:769px){
 #topwrap{width:100%;margin:0px auto;background:#000 url(paket-wisata-dieng-m.jpg)no-repeat center right;background-size:cover}
@@ -112,7 +126,27 @@ nav ul li a{    display: block;
     border-bottom: rgba(204, 204, 204, 0.35) solid 1px;
 }
 nav ul li a:hover{background:#fff;color:#888}
+.sobj{position:relative;overflow:hidden}
 }
+.obj{width:100%;margin:0px auto}
+
+.sobj img{width:100%;height:auto}
+.sobj section{position:absolute;bottom:80px;width:100%;text-align:center}
+.sobj section h1{border-top: #fff solid 2px; border-bottom: #fff solid 2px;
+    font-size: 28px; display:inline-block;
+    letter-spacing: 3px;color:#fff;text-align:center;font-weight:normal;text-transform:uppercase;padding:10px 0px}
+#desc h4{    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;font-size:30px}
+#desc p{font-size: 18px;
+    letter-spacing: 2px;
+    color: #777}
+#obj1{background:#BD1313;}
+#obj2{background:#39E61B}
+#obj3{background:#39B0EA}
+#obj4{background:#F3A354}
+#obj5{background:#C867EF}
+#obj6{background:#0e85dc}
 </style>
 </head>
 <body>
@@ -127,7 +161,7 @@ nav ul li a:hover{background:#fff;color:#888}
    <li><a href="">Wisata Dieng 2d1n</a></li>
    <li><a href="">Wisata Dieng 2d1n</a></li>
    <li><a href="">Kontak Kami</a></li>
-</ul> 
+</ul>
 </div>
  </nav>
  </div>
@@ -135,28 +169,52 @@ nav ul li a:hover{background:#fff;color:#888}
  </header>
 <div id='topwrap' class='centerdiv'>
 <div  id='formpaket' class='fwhite text-center'>
-<h1><span class='fwhite'>GETAWAY</span><span class='fyellow'>DIENG</span></h1>
+<h1><span class='fwhite'>GETAWAY</span> <span class='fyellow'>DIENG</span></h1>
 
  <p class='font120'>Ulasan Tempat Wisata dan MarketPlace Wisata Dieng Terlengkap mulai dari Penginapan. Paket trip, Rental Kendaraan dan lain-lain.</p><p> Temukan dan Bandingkan Penawaran harga terbaik untuk kemudahan Perjalanan wisata anda ke Dieng.</p>
 <div class='pad20 mrg5 text-center  posrelhid'>
-<a href='#' class='but'>EXPLORE DIENG</a>
+<a href='#!wisata-dieng' class='but'>EXPLORE DIENG</a>
 </div>
 </div>
 </div>
- <div class='width100 centerdiv' style='max-width:900px'>
- <main>
- <div id='paketwisata' class='mrg20'></div>
- </main>
- <aside>
-<div id='divwrap' class='sidemenu dinblock nolist pad10 bd-right-bdgrey'>
 
+ <div class='clear'/>
+<div id='!wisata-dieng' class='obj centerdiv'>
+<div id='desc' class='posrelhid pad20  text-center'>
+<h4>What To  <span class='fyellow'>See</span></h4>
+<p>Lihat referensi,ulasan dan foto-foto Tempat-tempat menarik untuk anda kunjungi saat berlibur di Kawasan Wisata Dieng</p>
+</div><div class='clear'/>
+ <div id='obj1' class='width50  floleft dinblock vermid sobj'>
+ <section><h1>Batu Ratapan Angin</h1>  </section>
+<img src="dringo/Bunga Daisy Gunung Prau via @ahmadk_anam.jpg" width="" height="" alt="" border=0>
+ </div>
+ <div id='obj2' class='width50 floleft dinblock vermid sobj'>
+ <section> <h1>Bukit Sikunir Dieng</h1></section>
+  <img src="dringo/Daisy Gunung Prau via @dheawidjaya.jpg" width="" height="" alt="" border=0>
+ </div>
+ <div id='obj3' class='width50 floleft dinblock vermid sobj'>
+<section>  <h1>Gunung Prau Dieng</h1>
+</section>  <img src="dringo/milkyway Gunung Prau via @haidarwirawan.jpg" width="" height="" alt="" border=0>
+ </div>
+ <div id='obj4' class='width50  floleft dinblock vermid sobj'>
+<section> <h1>Wana Wisata Petak 9</h1>
+</section>   <img src="dringo/Telaga Cebong Dieng via @ernapramita.jpg" width="" height="" alt="" border=0>
 
-
-</div>
- </aside>
+ </div>
+ <div id='obj5' class='width50 floleft dinblock vermid sobj'>
+<section> <h1>Kawah Sikidang</h1>
+</section> <img src="dringo/Telaga Dringo Dieng via @binaralif.jpg" width="" height="" alt="" border=0>
+ </div>
+ <div id='obj6' class='width50 floleft dinblock vermid sobj'>
+<section> <h1>Telaga Warna</h1> </section>
+ <img src="dringo/Telaga Dringo Dieng via @katahafit.jpg" width="" height="" alt="" border=0>
+ </div>
  </div>
  <div class='clear'/>
  <footer>
+ <div class='pad10 mrg20 text-center'>
+ <p class='font80 fgrey'>GetAway Dieng Copyright RancangMedia 2015 -2017</p>
+ </div>
  </footer>
 </body>
 </html>
